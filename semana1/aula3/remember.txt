@@ -1,0 +1,6 @@
+Coloque os comandos de Git na ordem que devem ser executados para alterar um projeto já existente.
+e. git pull origin master
+b. git checkout -b novaBranch
+d. git add nomeDoArquivo
+c. git commit -m “Alterando o projeto”
+a. git push origin novaBranch
