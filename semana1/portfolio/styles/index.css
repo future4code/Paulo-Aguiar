@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(29, 29, 29); 
+}
+
+.header {
+  background-color: rgb(70, 70, 70);
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.header li {
+  list-style-type: none;
+}
+
+.header li a {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  background-color: inherit;
+}
+
+.header li a:hover {
+  background-color: rgba(255, 255, 255, 0.589);
+}
+
+#pg1 {
+  height: 100vh;
+}
+
+.titulo {
+  margin-top: 30px;
+  color: rgb(255, 255, 255);
+  font-family: 'Permanent Marker', cursive;  
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#minhaFoto {
+  display: block;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#sobreMim {
+  color: rgb(0, 216, 0);
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  text-align: justify;
+  margin: 20px 50px 20px 50px;
+  text-indent: 30px;
+}
+
+.subtitulo {
+  background-color: rgb(70, 70, 70);
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.formacoes {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#formacao {
+  text-align: center;
+  color: rgb(0, 216, 0);
+  font-family: 'Karla', sans-serif;
+  margin-top: 20px;
+  margin-left: 15px;
+  display: block;
+}
+
+#pg2 {
+  height: 100vh;
+}
+
+#projetos {
+  display: flex;
+  justify-content: center;
+}
+
+#projetoF4, #projetoLoja {
+  margin: 10px 30px;
+}
+
+#linkF4, #linkLoja {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+#imgf4, #imgZelda {
+  width: 200px;
+  height: 150px;
+}
