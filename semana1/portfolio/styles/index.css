@@ -7,13 +7,12 @@ body {
   background-color: rgb(255, 255, 255);
 }
 
-#pg1, #pg2, #pg3 {
+#pg1, #pg2, #pg3, #pg4 {
   height: 92vh;
   border-top: 30px solid brown;
   border-left: 30px solid brown;
   border-right: 30px solid brown;
 }
-
 
 .header {
   overflow: hidden;
@@ -77,15 +76,13 @@ body {
   text-indent: 30px;
 }
 
-.subtitulo {
-  margin-top: 10px;
-  text-align: justify;
-  width: 100%;
-}
-
 .formacoes {
   font-size: 20px;
   text-align: justify;
+  margin-top: 10px;
+}
+
+.subtitulo {
   margin-top: 10px;
 }
 
@@ -123,16 +120,58 @@ body {
   flex-direction: column;
   text-align: center;
   color: brown;
-  font-size: 20px;
+  font-size: 30px;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
 }
 
 #imgf4, #imgZelda {
-  width: 200px;
-  height: 150px;
+  width: 400px;
+  height: 300px;
 }
 
-#pg3 {
+.habilidades {
+  text-align: justify;
+  font-family: 'Karla', sans-serif;
+  margin-left: 30px;
+  margin-right: 20px;
+  color: brown;
+}
+
+.habilidades ul, h2 {
+  margin-bottom: 10px;
+}
+
+.habilidades ul, p {
+  font-size: 20px;
+}
+
+.habilidades li {
+  font-weight: bold;
+}
+      
+#pg4 {
   border-bottom: 30px solid brown;
+}
+
+.form {
+  font-size: 25px;
+  font-family: 'Karla', sans-serif;
+  color: brown;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.form input {
+  height: 25px;
+  max-width: 250px;
+}
+
+.form label {
+  margin-top: 20px;
+}
+
+.form textarea {
+  max-width: 500px;
 }
