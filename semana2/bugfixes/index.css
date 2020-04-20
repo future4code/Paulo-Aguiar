@@ -51,11 +51,9 @@ div img {
 }
 
 .container {
+    display: block;
     height: 500px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-
 }
 
 .icone {
@@ -64,21 +62,29 @@ div img {
 
 
 /** 
-  *
-  *  ESTILOS HOME 
-  *
-  **/
+*
+*  ESTILOS HOME 
+*
+**/
 
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    position: relative;
+    height: 520px;
 }
 
 #container-de-descricao>ol {
     padding: 15px 0px;
 }
 
+#container-de-descricao>p {
+    margin-top: 20px;
+}
+
 #container-para-comprar {
+    display: flex;
+    flex-direction: column;
     background-color: #e7eb90;
 }
 
