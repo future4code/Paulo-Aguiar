@@ -118,11 +118,19 @@ table {
 }
 
 td button {
-    background-color: #fadf63;
+    background-color: #d3bc55;
     width: 150px;
     height: 30px;
     border-radius: 5px;
     color: black;
+}
+
+td button:hover {
+    background-color: #a59341;
+}
+
+td button:active {
+    color: white;
 }
 
 .container-do-search {
