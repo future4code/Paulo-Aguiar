@@ -17,6 +17,8 @@ h2 {
 }
 
 input {
+    border: none;
+    border-bottom: 2px solid black;
     height: 20px;
     width: 500px;
 }
@@ -137,7 +139,6 @@ td button:active {
     margin-top: 20px;
     height: 100px;
 }
-
 
 #back-button {
     background-color: white;
