@@ -83,8 +83,9 @@ div img {
     height: 520px;
 }
 
-#container-de-descricao>ol {
+#container-de-descricao ol {
     padding: 15px 0px;
+    display: inline-block;
 }
 
 #container-de-descricao>p {
@@ -103,7 +104,6 @@ div img {
     font-size: 60px;
 }
 
-
 /**
   *
   *  ESTILOS COMPRAR 
@@ -115,10 +115,8 @@ div:last-child {
     text-align: center;
 }
 
-
-
 table {
-    width: 70%;
+    width: 60%;
     text-align: center;
     margin: auto;
 }
