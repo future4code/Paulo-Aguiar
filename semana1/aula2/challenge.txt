@@ -1,0 +1,3 @@
+Ferramenta de versionamento é um software que auxilia 
+no controle de versões quando do desenvolvimento de programas/sites, 
+nos possibilitando salvar e relatar cada passo, sem sobrescrever as versões anteriores.

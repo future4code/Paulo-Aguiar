@@ -1,0 +1,95 @@
+cd assassinato-na-linha-de-comando
+  100  ls
+  101  cat inicio
+  102  cd misterio/
+  103  ls
+  104  cat cena-do-crime
+  105  grep pista
+  106  ls
+  107  grep pista cena-do-crime
+  108  cat cena-do-crime
+  109  ls
+  110  cd ..
+  111  cat inicio
+  112  ls
+  113  cd misterio/
+  114  grep PISTA cena-do-crime
+  115  ls
+  116  cat automoveis
+  117  grep 1,83 automoveis
+  118  ls
+  119  cd entrevistas
+  120  ls
+  121  ls
+  122  cd ..
+  123  cd pessoas
+  124  cat pessoas
+  125  grep Annabel pessoas
+  126  ls
+  127  cd associacoes/
+  128  ls
+  129  cat AAA
+  130  ls
+  131  cd Museu_da_História_do_Bash
+  132  cat Museu_da_História_do_Bash
+  133  ls
+  134  cd ..
+  135  ls
+  136  cd ruas
+  137  ls
+  138  cat Vila_Hart
+  139  head -n 40 Vila_Hart
+  140  ls
+  141  head -n 179 Vila_Buckingham
+  142  cd ..
+  143  ls
+  144  cd entrevistas/
+  145  ls
+  146  cat entrevista-#47246024
+  147  cat entrevista-47246024
+  148  cat entrevista-4724602447246024
+  149  cat entrevista-699607
+  150  cd ..
+  151  ls
+  152  grep L337
+  153  grep L337 automoveis
+  154  grep 1,83 automoveis
+  155  grep -A 2 1,83 automoveis
+  156  grep -A 5 1,83 automoveis
+  157  man grep
+  158  grep man
+  159  grep --help
+  160  cat automoveis
+  161  grep -B 5 1,83 automoveis
+  162  grep Honda automoveis
+  163  grep --help
+  164  cat automoveis
+  165  grep -A 5 L337ZR9 automoveis
+  166  grep -A 5 L337P89 automoveis
+  167  grep -A 5 L337GX9 automoveis
+  168  grep -A 5 L337GX9 automoveis
+  169  grep -A 5 L337QE9 automoveis
+  170  ls
+  171  cat pessoas
+  172  ls
+  173  grep --help
+  174  grep -- 'Honda'\''1,83' automoveis
+  175  grep -- 'Honda|1,83' automoveis
+  176* grep
+  177  grep -A 5 L337QE9 automoveis
+  178  grep -A 5 L337GB9 automoveis
+  179  grep -A 5 L337OI9 automoveis
+  180  grep -A 5 L337X19 automoveis
+  181  grep -A 5 L337539 automoveis
+  182  grep -A 5 L3373U9 automoveis
+  183  grep -A 5 L337369 automoveis
+  184  grep -A 5 L337DV9 automoveis
+  185  grep -A 5 L3375A9 automoveis
+  186  grep -A 5 L337WR9 automoveis
+  187  ls
+  188  cd associacoes/
+  189  ls
+  190  grep Jacqui Maher *
+
+O assassino da linha de comando é o Jacqui Maher. A cor e a placa do carro batem com a declaração da testemunha, 
+a altura bate com a filmagem do caixa eletrônico e o nome do suspeito se encontra em todas as associações cujos cartões foram encontradas na carteira do assassino

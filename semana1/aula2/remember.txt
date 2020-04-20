@@ -1,0 +1,10 @@
+1. mkdir ./nova-pasta | touch nova-pasta/novo-aquivo.txt
+2. mkdir ./nova-pasta2 | mv ./aquivo-existente nova-pasta2
+3. cp ./aquivo-existente nova-pasta2
+4. mv ./aquivo-existente ./arquivo-renomeado
+5. grep "termo" arquivo-existente
+6. cat arquivo-existente
+7. whoami
+8. ls
+9. cd diretorio
+10. head -n 5 arquivo; tail -n 7 arquivo

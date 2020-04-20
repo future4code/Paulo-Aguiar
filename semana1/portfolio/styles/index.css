@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255);
+}
+
+#pg1, #pg2, #pg3, #pg4 {
+  height: 92vh;
+  border-top: 30px solid brown;
+  border-left: 30px solid brown;
+  border-right: 30px solid brown;
+}
+
+.header {
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: brown;
+}
+
+.header ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.header li {
+  list-style-type: none;
+}
+
+.header li a {
+  display: block;
+  text-align: center;
+  padding: 5px 20px;
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+.header li a:hover {
+  background-color:rgba(75, 21, 21, 0.466);
+}
+
+.titulo {
+  font-size: 50px;
+  margin-top: 30px;
+  color: brown;
+  font-family: 'Cantarell', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#minhaFoto {
+  display: block;
+  object-fit: cover;
+  width: 245px;
+  height: 307px;
+  float: right;
+  margin: 30px 20px 20px;
+}
+
+#sobreMim {
+  color: brown;
+  font-size: 20px;
+  font-family: 'Karla', sans-serif;
+  text-align: justify;
+  margin: 30px 20px 10px 20px;
+  text-indent: 30px;
+}
+
+.formacoes {
+  font-size: 20px;
+  text-align: justify;
+  margin-top: 10px;
+}
+
+.subtitulo {
+  margin-top: 10px;
+}
+
+#formacao {
+  color: brown;
+  font-family: 'Karla', sans-serif;
+  margin-top: 20px;
+  margin-left: 20px;
+  display: block;
+}
+
+#redes-sociais {
+  display: flex;
+  justify-content: center;
+}
+
+.icones {
+  margin: 5vw;
+  width: 60px;
+}
+
+
+#projetos {
+  display: flex;
+  justify-content: center;
+}
+
+#projetoF4, #projetoLoja {
+  margin: 10px 30px;
+}
+
+#linkF4, #linkLoja {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: brown;
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+#imgf4, #imgZelda {
+  width: 400px;
+  height: 300px;
+}
+
+.habilidades {
+  text-align: justify;
+  font-family: 'Karla', sans-serif;
+  margin-left: 30px;
+  margin-right: 20px;
+  color: brown;
+}
+
+.habilidades ul, h2 {
+  margin-bottom: 10px;
+}
+
+.habilidades ul, p {
+  font-size: 20px;
+}
+
+.habilidades li {
+  font-weight: bold;
+}
+      
+#pg4 {
+  border-bottom: 30px solid brown;
+}
+
+.form {
+  font-size: 25px;
+  font-family: 'Karla', sans-serif;
+  color: brown;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.form input {
+  height: 25px;
+  max-width: 250px;
+}
+
+.form label {
+  margin-top: 20px;
+}
+
+.form textarea {
+  max-width: 500px;
+}

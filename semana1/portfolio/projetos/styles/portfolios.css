@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(255, 255, 255); 
+  border-top: 30px solid brown;
+  border-left: 30px solid brown;
+  border-right: 30px solid brown;
+  border-bottom: 30px solid brown;
+  height: 90vh;
+}
+
+h1 {
+  font-size: 50px;
+  margin-top: 30px;
+  color: brown;
+  font-family: 'Cantarell', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#descricao {
+  color: brown;
+  font-size: 18px;
+  font-family: 'Karla', sans-serif;
+  text-align: justify;
+  margin: 20px 50px 20px 50px;
+  text-indent: 30px;
+}
+
+h2 {
+  font-family: 'Karla', sans-serif;
+  margin-left: 50px;
+  color: brown;
+  margin-top: 10px;
+  width: 100%;
+}
+
+#listaTec {
+  font-family: 'Karla', sans-serif;
+  margin-left: 70px;
+  color: brown;
+  margin-top: 10px;
+  width: 100%;
+}
+
+a {
+  font-size: 20px;
+  color: black;
+  margin-top: 50px;
+  margin-left: 50px;
+  float: left;
+}
+
+#imagens img {
+  float: right;
+  width: 500px;
+  display: block;
+  margin-right: 40px;
+}
