@@ -53,6 +53,9 @@ div img {
 .container {
     height: 500px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+
 }
 
 .icone {
