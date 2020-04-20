@@ -7,6 +7,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -114,9 +115,13 @@ div:last-child {
     text-align: center;
 }
 
-table {
+
+
+div table {
+    width: 35%;
     text-align: center;
-    width: 60%;
+    display: block;
+    margin: auto;
 }
 
 td button {
