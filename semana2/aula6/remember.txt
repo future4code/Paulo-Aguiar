@@ -1,0 +1,33 @@
+1.
+a. git checkout -b new-branch
+b. git add .
+c. git push origin new-branch
+d. git pull origin master
+
+2. Block ocupa todo o espaço horizontal onde se encontra o elemento. Inline ocupa apenas o espaço 
+horizontal que o elemento precisa.
+Block: 
+<p> para fazer um novo parágrafo
+<h1> para criar um título
+<li> para criar um novo item de uma lista
+Inline:
+<span> para criar uma frase, ou palavra, uma ao lado da outra
+<label> para criar um nome para o campo a ser preenchido
+<input> para criar um campo a ser preenchido, ou um botão
+
+3. 
+a. Display: Block; Margin: auto;
+b. Float: right
+c. div>p {
+   color: green;
+   }
+   div>p:first-child {
+   color: yellow;
+   }
+   div>p:last-child {
+   color: blue;
+   }
+
+4.
+Element: Aponta os elementos equivalentes no código e na tela.
+Console: Permite ver a saída e adicionar entradas no console da página.

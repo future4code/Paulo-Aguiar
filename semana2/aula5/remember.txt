@@ -1,0 +1,15 @@
+git add index.html
+adiciona o arquivo index.html ao stage
+
+git checkout -b exercicio1
+cria e senguida move-se para a branch exercicio1
+
+ls
+mostra os arquivos e pastas da pasta atual
+
+git checkout exercicio3
+move-se para branch exercicio3
+
+mkdir exercicio2
+cria a pasta exercicio2
+
