@@ -1,0 +1,12 @@
+podemos usar jQuery do JavaScript para adicionar as classes e depois modificar no CSS:
+
+a.
+$("div:first").addClass("header");
+$("div:second").addClass("meio");
+$("div:third").addClass("footer");
+
+b.
+$("button:first").addClass("redes-sociais");
+$("button:second").addClass("comprar");
+
+
