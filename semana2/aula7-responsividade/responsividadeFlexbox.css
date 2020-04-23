@@ -1,0 +1,134 @@
+* {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  background-color: red;
+}
+
+.container1 {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+#um, #quatro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 100px;
+  width: 30vw;
+  background-color: blue;
+}
+
+#dois, #cinco {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 100px;
+  width: 30vw;
+  background-color: yellow;
+}
+
+#tres, #seis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 100px;
+  width: 30vw;
+  background-color: green;
+}
+
+#quatro, #cinco, #seis {
+  margin-top: 40px;
+}
+
+.container2 {
+  color: white;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#sete, #oito {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: black;
+  width: 47%;
+}
+
+.container3 {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#nove, #dez, #onze {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  height: 100px;
+  width: 30%;
+}
+
+@media screen and (max-device-width: 770px) and (min-device-width: 500px) {
+ #um, #dois {
+  width: 47%;
+ }
+ #tres {
+   margin-top: 40px;
+   width: 97%;
+ }
+ 
+ #quatro, #cinco {
+  display: flex;
+  width: 47%;
+ }
+ #seis {
+   margin-top: 40px;
+   width: 97%;
+ }
+ 
+ .container3{
+   display: flex;
+   flex-wrap: wrap;
+ }
+
+ #nove, #dez {
+  width: 47%;
+ }
+ #onze {
+   margin-top: 40px;
+   width: 97%;
+ }
+}
+
+@media screen and (max-device-width: 499px) {
+  #um, #dois, #tres, #quatro, #cinco, #seis, #sete, #oito, #nove, #dez, #onze {
+    width: 97%;
+  }
+
+  .container2 {
+    flex-wrap: wrap;
+  }
+
+  .container3 {
+    flex-wrap: wrap;
+  }
+
+  #dois, #tres, #oito, #dez, #onze {
+    margin-top: 40px;
+  }
+
+}

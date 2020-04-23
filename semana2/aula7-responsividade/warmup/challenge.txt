@@ -1,0 +1,8 @@
+1. É estudo obrigatório, pois atualmente é impressindível que todos os sites sejam responsivos 
+devido a disceminação mobile.
+
+2. Escolher entre Desktop First ou Mobile First significa escolher qual será mais detalhado, pra qual dos dois
+tipos o site é primariamente destinado. Se for um Desktop First começaremos da tela maior, adaptando para para 
+tamanos menores e vice-versa.
+
+3. Sintaxe: @media, max-width, unidades: vw, vh
