@@ -1,0 +1,4 @@
+1. Define, respctivamente o início da coluna e o fim da linha no display grid
+2. Unidades relativas dependem de algum parâmetro, como o tamanho da tela, ou o tamanho de alguma outra unidade. Unidade absoluta é define um tamanho fixo.
+3. Flexbox é mais dinâmico, enquanto grid define melhor a posição e dimenção de cada item.
+
