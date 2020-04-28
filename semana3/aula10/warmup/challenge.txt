@@ -1,0 +1,12 @@
+1. if (genero == Feminino) {
+   const saudacoes = "Bem-vinda"
+   }
+   if (genero == masculino) {
+   const saudacoes = "Bem-vindo"
+   }
+   return saudacoes
+2. Usaria um if, como na questão 1., dividiria a e b por 2 e se o resto fosse = 0 o número seria par, 
+   se fosse diferente de 0 (else), seria ímpar. Depois usaria um console.log para escrever no terminal
+3. Subtrairia a - b, se o resultado x fosse negativo (x<0), poderia escrever 
+console.log("b é maior do que a"), se fosse positivo(x>0), seria console.log("a é maior do que b"), 
+se a fosse igual a b, bastaria colocar a condição de a == b e console.log("a é igual a b").
