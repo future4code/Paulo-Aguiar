@@ -1,0 +1,4 @@
+O site possui uma barra de navegação para outros sites parceiros e, logo abaixo, uma outra barra de navegação para outras partes do próprio site. Após essa introdução ele é dividido 
+principalmente em três colunas que passam a ser duas quando rolamos mais para baixo do site, sendo uma principal, que contém o assunto da página em questão e outra secundária, utilizada para navegar para outros links populares do site.
+O site é responsivo, mudando sua estrutura quando ultrapassamos o limite mínimo de 1020px e depois 800px.
+

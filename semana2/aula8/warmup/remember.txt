@@ -1,0 +1,12 @@
+1. (a) é a área visível para o usuário em um dispositivo.
+2. (a) vw (b) vh
+3. (a) absolutas (b) cm (c) px (d) mm
+4. (a) em
+5. (a) @media
+6. (a) 3 vezes o tamanho do primeiro container externo 
+   (b) 5 vezes o tamanho do último container externo.
+7. (a) relativos (b) máximos
+8. (a) relativas (b) absolutas
+9. (a) a adequação da página ao tamanho da tela do dispositivo
+10.(a) desktop first (b) façamos o site pensando primeiramente na versão
+   para mobile
