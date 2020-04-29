@@ -1,0 +1,18 @@
+1.
+a. const nome
+   let suasInformacoes
+   const ano
+   const idade
+b. porque é uma variável que vai mudar na sétima linha do código.
+c. adiciona mais informações à variável, além do que já havia nela.
+d. nome: string; suasInformações: string; ano: string; idade: numérico.
+e. tranforma o tipo da variável ano de string para numérico.
+f. Seu nome é: Paulo. Você terá 33 anos no fim deste ano. 
+
+2. 
+&&: é um operador que só retorna verdadeiro se ambas afirmações forem verdadeiras.
+    Ex.: false && true = false; true && true = true. 
+||: é um operador que só retorna falso se ambas afirmações forem falsas.
+    Ex.: false || true = true; false || false = false. 
+!: é um operador que inverte a afirmação lógica.
+    !false = true; !true = false.
