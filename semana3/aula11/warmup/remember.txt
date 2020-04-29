@@ -1,0 +1,14 @@
+1. Condicionais são eventos que podem ou não desencadear outros eventos a depender do seu valor.
+   Exemplos são if e else.
+2. Quando temos uma lista com muitas opções que podem acontecer dependendo do valor de um evento.
+3. Um escopo é um ponto/objetivo o qual deseja-se alcançar.
+   let variavelAcessivel = "consigo acessar"
+   if (a === b) {
+   let variavelAcessivelApenasDentroDesteBlocoIf = "Consigo acessar apenas aqui"
+   console.log(variavelAcessivelApenasDentroDesteBlocoIf) //vai acessar normalmente
+   console.log(variavelAcessivel) //vai acessar normalmente
+   }
+   console.log(variavelAcessivelApenasDentroDesteBlocoIf) //não conseguimos acessar fora do bloco if,
+   //pois a variável se encontra em outro escopo
+   console.log(variavelAcessivel) //ainda vai acessar normalmente, pois a variável se encontra em um escopo
+   //global
