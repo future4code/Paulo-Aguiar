@@ -54,24 +54,54 @@ c. [12, 18, 21, 27, 30]; [12]
 // }
 // console.log(array2)
 
-//------------------------------------------DESAFIO 2-----------------------------------
-let numeroMagico = prompt("Digite um número e deixe o trouxa do player 2 tentar acertar")
-console.log("Vamos jogar!")
-let tentativa = prompt("Escolha um número e veja se você dá sorte!!!")
-console.log("O número chutado foi: " + tentativa)
-let tentativas = 1;
-while (tentativa !== numeroMagico) {
-  tentativa = prompt("Escolha outro número e veja se você dá sorte, agora vai!!!")
-  if(numeroMagico < tentativa) {
-    console.log(tentativa + " é maior do que o seu número da sorte, tente outra vez")
-    tentativas.push(tentativa)
-  }
-  if(numeroMagico > tentativa) {
-    console.log(tentativa + " é menor do que o seu número da sorte, não desista!")
-    tentativas.push(tentativa)
-  }
-}
-if(tentativa === numeroMagico) {
-  console.log("Acertou! Você venceu :)")
-  console.log("O seu número de tentativas foi: " + tentativas.length)
-} 
+// //------------------------------------------DESAFIO 2-----------------------------------
+// let numeroMagico = prompt("Digite um número e deixe o trouxa do player 2 tentar acertar")
+// console.log("Vamos jogar!")
+// let tentativa = prompt("Escolha um número e veja se você dá sorte!!!")
+// let tentativas = 0;
+// while (tentativa !== numeroMagico) {
+//   if(tentativa > numeroMagico) {
+//     console.log("O número chutado foi: " + tentativa)
+//     console.log(tentativa + " é maior do que o seu número da sorte, tente outra vez")
+//     tentativas++
+//     tentativa = prompt("Escolha outro número e veja se você dá sorte, agora vai!!!")
+//   }
+//   if(tentativa < numeroMagico) {
+//     console.log("O número chutado foi: " + tentativa)
+//     console.log(tentativa + " é menor do que o seu número da sorte, não desista!")
+//     tentativas++
+//     tentativa = prompt("Escolha outro número e veja se você dá sorte, agora vai!!!")
+//   }
+// } 
+// console.log("Acertou! Você venceu :)")
+// tentativas++
+// console.log("O seu número de tentativas foi: " + tentativas)
+// //---------------------------------------DESAFIO 3---------------------------------
+// let numeroMagico = Math.round(Math.random()*10)
+// console.log(numeroMagico)
+// console.log("Vamos jogar!")
+// let tentativa = Number(prompt("Escolha um número e veja se você dá sorte!!!"))
+// let tentativas = 0;
+// while (tentativa !== numeroMagico) {
+//   if(tentativa > numeroMagico) {
+//     console.log("O número chutado foi: " + tentativa)
+//     console.log(tentativa + " é maior do que o seu número da sorte, tente outra vez")
+//     tentativas++
+//     tentativa = Number(prompt("Escolha outro número e veja se você dá sorte, agora vai!!!"))
+//   }
+//   if(tentativa < numeroMagico) {
+//     console.log("O número chutado foi: " + tentativa)
+//     console.log(tentativa + " é menor do que o seu número da sorte, não desista!")
+//     tentativas++
+//     tentativa = Number(prompt("Escolha outro número e veja se você dá sorte, agora vai!!!"))
+//   }
+// } 
+// console.log("Acertou! Você venceu :)")
+// tentativas++
+// console.log("O seu número de tentativas foi: " + tentativas)
+
+/*o Chrome dava um erro ao acertar o número randômico e eu demorei muito tempo
+pra conseguir achar o erro. O erro era que ele tava comparando um número 
+(provindo do Math.random) com uma string (provinda do prompt). Esse erro não deu
+da primeira vez pois ele comparava string com string (prompt com prompt).
+Então a dificuldade foi um tanto grande. */
