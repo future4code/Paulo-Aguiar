@@ -1,0 +1,10 @@
+1. F - Cont serve para variávis fixas, ao contrário de let
+2. T
+3. F - cd é acessar um diretório
+4. F - o oposto de === é !==
+5. T
+6. F - o && apenas retorna true se todos os operadores forem true
+7. F - retorna false se todas as operações forem false
+8. F - irá continuar executando enquanto for true
+9. T 
+10. F - vai rodar 7 vezes
