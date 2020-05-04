@@ -1,0 +1,14 @@
+1. const variavel; let variavel
+2. Booleano, numerico, string
+3. null / undefined
+4.
+if: se a condição for verdadeira, faça isso
+while: enquanto a condição for verdadeira, faça isso
+switch: execute a ação da condição que for verdadeira
+5. Comparadores comparam dois valores para julgar se são um maior que o outro, ou iguais, etc. Ex.: ===; >=.
+6. 
+É um vetor, ou conjunto de elementos.
+array[indice do elemento]
+array.push(elemento)
+array.length
+7. São partes do código cujas variáveis são restritas a apenas aquela parte. Não se pode acessar uma variável que seja de outro bloco, esteja em um escopo restrito.
