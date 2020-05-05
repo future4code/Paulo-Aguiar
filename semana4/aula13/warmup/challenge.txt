@@ -1,0 +1,2 @@
+a. Digita Oi! no console do navegador
+b. cria uma função para ser chamada mais tarde, com o valor que quisermos. A função no caso está retornando 10 no console do navegador, mas poderia ter sido chamada com outro valor.
