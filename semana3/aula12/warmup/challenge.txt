@@ -1,0 +1,6 @@
+Situação 1
+Quando clicamos no botão de pesquisa, o site envia um comando que relaciona o que escrevemos aos 
+seus vídeos que se encontram no banco de dados, mostrando os vídeos que deram o maior match com o 
+que escrevemos no input. Quando clicamos no video desejado ele abre outro HTML responsável pelo vídeo.
+Quando clicamos em "inscrever-se" o botão dá um comando para o site que modifica nossas informações salvas
+em nosso banco de dados do usuário para adicionar o canal no nosso usuário.
