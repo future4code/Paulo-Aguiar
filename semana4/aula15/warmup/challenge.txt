@@ -1,0 +1,3 @@
+Bulsasaur, fez um ataque do tipo, grama
+Charmander, fez um ataque do tipo, fogo
+Squirtle, fez um ataque do tipo, agua

@@ -1,0 +1,9 @@
+function adicionaImagens(idDaDiv, imagens){
+	if(idDaDiv === "") {
+		const div = document.getElementById(idDaDiv)
+		for(const url of imagens){
+			div.innerHtml += "<img src='" + url + "'>" 
+		}
+	}
+}
+ 
