@@ -1,0 +1,47 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: antiquewhite;
+  margin-bottom: 10px;
+}
+
+header input, button {
+  height: 30px;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+}
+
+main div {
+  display: flex;
+  flex-direction: column;
+  width: 13vw;
+  height: 80vh;
+  border: 1px solid blueviolet
+}
+
+main div h3 {
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(0, 255, 255, 0.205);
+}
+
+main div li {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-left: 20px;
+  color: red;
+}
+
+.riscado {
+  text-decoration: line-through
+}
