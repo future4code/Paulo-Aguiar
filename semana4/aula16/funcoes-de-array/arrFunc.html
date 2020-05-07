@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Bem vindo(a) ao seu controle de despesas</h1>
+  <main>
+    <section>
+      <h2>Nova despesa</h2>
+      <label for="valor">Valor:</label>
+      <input type="text" id="despesa-valor" placeholder="Digite o valor gasto" value="35">
+      <label for="tipo">Tipo de despesa:</label>
+      <select name="tipo" id="despesa-tipo">
+        <option value="0" selected disabled>Selecione o tipo de despesa</option>
+        <option value="Games">Games</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Descrição">Alimentação</option>
+      </select>
+      <label for="descrica">Descrição da despesa</label>
+      <textarea name="descricao-despesa" id="despesa-descricao" cols="40" rows="5" placeholder="Descreva sua despesa aqui"></textarea>
+      <button onclick="cadastrarDespesa()">Cadastrar despesa</button>
+    </section>
+
+    <section>
+      <h2>Detalhes das despesas</h2>
+      <h3>Despesas:</h3>
+      <div id="resultados-pesquisa">
+      </div>
+      <label for="pesquisa-tipo">Tipo de despesa</label>
+      <select name="tipo" id="pesquisa-tipo">
+        <option value="" selected disabled>Selecione o tipo de despesa</option>
+        <option value="Games">Games</option>
+        <option value="Transporte">Transporte</option>
+        <option value="Alimentação">Alimentação</option>
+      </select>
+      <label for="pesquisa-maximo">Valor máximo</label>
+      <input type="text" id="pesquisa-maximo">
+      <label for="pesquisa-minimo">Valor mínimo</label>
+      <input type="text" id="pesquisa-minimo">
+      <div>
+        <button onclick="filtrar()">Filtrar</button>
+        <button onclick="filtrarLimpar()">Limpar filtros</button>
+      </div>
+    </section>
+
+    <section>
+      <h2>Extrato</h2>
+      <label for="total">Total gasto:</label>
+    </section>
+  </main>
+</body>
+</html>
