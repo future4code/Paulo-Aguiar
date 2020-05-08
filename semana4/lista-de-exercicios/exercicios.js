@@ -23,3 +23,32 @@ qual o menor e o maior número do array números. Ele faz isso iterando sobre o
 array e dando duas condicionais.
 Saída: -10; 1590 */
 
+// //Lógica de programação======================================================
+// //1.----------------------------------------------------------------------- 
+// //for, forEach e map
+
+// const array = [1, 3, 6, 2, 5, 3, 10, 200, 14]
+// for(item of array) {
+//   console.log(item*2)
+// }
+
+// array.forEach((item) => { console.log(item*2)})
+
+// array.map((item) => {console.log(item*2)})
+
+//2.---------------------------------------------------------------------------
+//a)false
+//b)true
+//c)true
+//d)true 
+//e)true
+
+//3----------------------------------------------------------------------------
+//O código não funcionava pois a condicional while estava presa em um loop infinito.
+
+const quantidadeDeNumerosPares = 3
+let i = 0
+while(i < quantidadeDeNumerosPares) {
+  console.log(i*2)
+  i++
+}
