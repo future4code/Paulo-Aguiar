@@ -104,3 +104,46 @@ Saída: -10; 1590 */
 
 // alerta()
 
+// //Objetos===================================================================
+// //1.-----------------------------------------------------------------------
+/* Arrays são um conjunto de elementos, podendo ser usados para guardar 
+vários elementos dentro dele. Objetos são variáveis com mais de um parâmetro,
+podemos usá-los para descrever um elemento com diversas características.*/
+
+// //2.------------------------------------------------------------------------
+
+// criaRetangulo = (lado1, lado2) => {
+//   retangulo = {
+//     largura: lado1,
+//     altura: lado2,
+//     perimetro: 2 * (lado1 + lado2),
+//     area: lado1 * lado2
+//   }
+//   return retangulo
+// }
+
+// //3.-------------------------------------------------------------------------
+// const filmeFavorito = {
+//   titulo: 'Pulp Fiction',
+//   ano: '1994',
+//   diretor: 'Quentin Tarantino',
+//   atores: ['Samuel L Jackson', ' Uma Thurman', ' Bruce Willis'],
+// }
+// console.log(`Venha assistir ao filme ${filmeFavorito.titulo}, de ${filmeFavorito.ano}, dirigido por ${filmeFavorito.diretor} e estrelado por ${filmeFavorito.atores}`) 
+
+// //4.--------------------------------------------------------------------------
+// const paulo = {
+//   nome: 'Paulo Aguiar',
+//   idade: 32,
+//   email: 'paulopma@hotmail.com',
+//   endereco: 'QS06, conjunto 610B, casa 20'
+// } 
+
+// anonimizarPessoa = (pessoa) => {
+//   const pessoaAnonima = {
+//     ...pessoa,
+//     nome: 'ANONIMO'
+//   }
+//   return pessoaAnonima
+// }
+
