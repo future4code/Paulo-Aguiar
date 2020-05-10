@@ -84,3 +84,23 @@ Saída: -10; 1590 */
 //   }
 //   console.log(`O maior é ${numeroMaior}\n${divisiveis}\nA diferença entre eles é ${diferenca}`)
 // }
+
+// // funções===================================================================
+// // 1.----------------------------------------------------------------------
+// const ar = [4, 2, 3, 7, 10, 3];
+
+// segundoMaiorEMenor = (array) => {
+//   let segundoMaiorNumero = array.sort((a, b) => b-a)[1];
+//   let segundoMenorNumero = array.sort((a, b) => a-b)[1];
+//   console.log(`O segundo maior número é ${segundoMaiorNumero} e o segundo menor número é ${segundoMenorNumero}`)
+// }
+
+// segundoMaiorEMenor(ar)
+
+// //2.------------------------------------------------------------------------
+// const alerta = () => {
+//   alert('Hello Future4')
+// }
+
+// alerta()
+
