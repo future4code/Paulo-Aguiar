@@ -43,12 +43,44 @@ Saída: -10; 1590 */
 //d)true 
 //e)true
 
-//3----------------------------------------------------------------------------
-//O código não funcionava pois a condicional while estava presa em um loop infinito.
+// //3----------------------------------------------------------------------------
+// //O código não funcionava pois a condicional while estava presa em um loop infinito.
 
-const quantidadeDeNumerosPares = 3
-let i = 0
-while(i < quantidadeDeNumerosPares) {
-  console.log(i*2)
-  i++
-}
+// const quantidadeDeNumerosPares = 3
+// let i = 0
+// while(i < quantidadeDeNumerosPares) {
+//   console.log(i*2)
+//   i++
+// }
+
+// //4--------------------------------------------------------------------------
+
+// classificacaoDeTriangulos = (a, b, c) => {
+//   if(a === b && b === c) {
+//     return ('O triângulo é equilátero')
+//   } else if(a === b && b != c) {
+//     return ('O triângulo é isóceles')
+//   } else if (a != b && a != c && b != c) {
+//     return ('O triângulo é escaleno')
+//   }
+// }
+
+// //5.-------------------------------------------------------------------------
+// analisadorDeNumeros = (a, b) => {
+//   let numeroMaior = 0;
+//   let divisiveis = true;
+//   let diferença = 0;
+//   if(a > b) {
+//     numeroMaior = a;
+//     diferenca = a - b;
+//   } else {
+//     numeroMaior = b;
+//     diferenca = b - a;
+//   }
+//   if(a % b === 0) {
+//     divisiveis = `${a} é divisível por ${b}`;
+//   } else {
+//     divisiveis = `${a} não é divisível por ${b}`;
+//   }
+//   console.log(`O maior é ${numeroMaior}\n${divisiveis}\nA diferença entre eles é ${diferenca}`)
+// }
