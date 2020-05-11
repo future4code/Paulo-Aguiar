@@ -1,0 +1,12 @@
+1.
+Podemos declará-las como função nomeada, não nomeada e utilizando "arrow":
+function minhaFunção(a, b) {}
+function() {}
+minhaFunção = () => {}
+
+2.
+É uma função que é utilizada como argumento de outra função:
+minhaFuncao1 = (10, minhaFunção2()) => {}
+
+3.
+O código fica mais limpo e funcional
