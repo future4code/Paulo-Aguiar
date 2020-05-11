@@ -147,3 +147,123 @@ podemos usá-los para descrever um elemento com diversas características.*/
 //   return pessoaAnonima
 // }
 
+// // funções de array===========================================================
+// //1------------------------------------------------------------------------------
+// const array = [
+// 	{ nome: "Pedro", idade: 20 },
+// 	{ nome: "João", idade: 10 },
+// 	{ nome: "Paula", idade: 12 },
+// 	{ nome: "Artur", idade: 89 } 
+// ]
+// //a.---------------------------------------------------------------------------
+// pessoasDeMaior = (arrayPessoas) => {
+//  return arrayPessoas.filter((pessoa) => pessoa.idade >= 20)
+// }
+
+// //b.-------------------------------------------------------------------------
+//   idadeInferiorAVinte = (arrayPessoas) => {
+//    return arrayPessoas.filter((pessoa) => pessoa.idade < 20)
+//   }
+
+// //2.-------------------------------------------------------------------------
+// const array = [1, 2, 3, 4, 5, 6]
+// //a.--------------------------------------------------------------------------
+// multiplicaPorDois = (array) => {
+//   return array.map((elemento) => elemento * 2)
+// }
+
+// //b.----------------------------------------------------------------------------
+// multiplicaPorTresComStrings = (array) => {
+//   const newArray = array.map((elemento) => elemento * 3)
+//   return newArray.join(' ').split(' ')
+// }
+
+// //c.--------------------------------------------------------------------------
+// parOuImpar = (array) => {
+//   let newArray = [] 
+//   array.forEach((elemento) => {
+//     if(elemento % 2 === 0) {
+//        newArray.push(`${elemento} é par`)
+//     } else {
+//       newArray.push(`${elemento} é impar`)
+//     }
+//   })
+//   return newArray;
+// }
+
+// //3.---------------------------------------------------------------------------
+// const pessoas = [
+// 	{ nome: "Paula", idade: 12, altura: 1.8},
+// 	{ nome: "João", idade: 20, altura: 1.3},
+// 	{ nome: "Pedro", idade: 15, altura: 1.9},
+// 	{ nome: "Luciano", idade: 22, altura: 1.8},
+// 	{ nome: "Artur", idade: 10, altura: 1.2},
+// 	{ nome: "Soter", idade: 70, altura: 1.9}
+// ]
+
+// //a.---------------------------------------------------------------------------
+
+// pessoasPermetidas = (array) => {
+//   return array.filter((pessoa) => pessoa.altura >= 1.5 && (pessoa.idade > 14 && pessoa.idade < 60))
+// }
+
+// //b.---------------------------------------------------------------------------
+// pessoasNaoPermitidas = (array) => {
+//   return array.filter((pessoa) => !(pessoa.altura >= 1.5 && (pessoa.idade > 14 && pessoa.idade < 60)))
+// }
+
+// //4.-------------------------------------------------------------------------
+// const consultas = [
+// 	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+// 	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+// 	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+// 	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+// ]
+
+// let pronome1 = ''
+// let pronome2 = ''
+// let emails = []
+// email = (consultas) => {
+//   consultas.forEach((pessoa) => {
+//     if(pessoa.genero === 'masculino') {
+//       pronome1 = 'Sr.'
+//       pronome2 = 'lo'
+//     } else {
+//       pronome1 = 'Sra.'
+//       pronome2 = 'la'
+//     }
+//     if(pessoa.cancelada === false) {
+//       emails.push(`Olá, ${pronome1} ${pessoa.nome}. Estamos enviando esta mensagem para lembrá-${pronome2} da sua consulta no dia ${pessoa.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`)
+//     } else { 
+//       emails.push(`Olá, ${pronome1} ${pessoa.nome}. Infelizmente, sua consulta marcada para o dia ${pessoa.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`)
+//     }
+//   })
+//   console.log(emails)
+//   return emails
+// }
+// email(consultas)
+
+// //5.---------------------------------------------------------------------------
+/* infelizmente demorei muito tempo nessa questão e o único jeito que consegui
+resolver foi utilizando reduce, que ainda não nos foi ensinado. */
+
+// const contas = [
+// 	{ cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+// 	{ cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+// 	{ cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+// 	{ cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+// 	{ cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+// 	{ cliente: "Soter", saldoTotal: 1200, compras: [] }
+// ]
+// let totalCompras = 0
+// atualizaSaldo = (contasClientes) => {
+//   contasClientes.forEach((conta) => {
+//     if(conta.compras.length != 0) {
+//       totalCompras = conta.compras.reduce((a, b) => a+b)
+//     } else {
+//       totalCompras = 0
+//     }
+//     conta.saldoTotal -= totalCompras
+//   })
+//   return contasClientes
+// }
