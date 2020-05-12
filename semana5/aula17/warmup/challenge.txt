@@ -1,0 +1,7 @@
+1.
+São funções salvas, códigos já criados previamente por outra pessoa, que podemos reutilizar no nosso código para agilizar nossa vida.:
+jQuery: Simplica nosso código em geral, para escrevermos menos, com ela, podemos utilizar o DOM com poucos caracteres, por exemplo.
+script.aculo.us: utilizado para implementação de efeitos visuais de um modo mais fácil e rápido
+
+2.
+A maior dificuldade que eu tive foi na implementação do DOM, no começo foi um tanto confuso. Talvez tenha sido também o que eu menos gostei de fazer.
