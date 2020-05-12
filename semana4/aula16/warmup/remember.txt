@@ -1,0 +1,20 @@
+const conta = {
+  nome: 'Paulo'
+  saldo: 1.000.000
+  depositar: depositar(quantia)
+  retirar: retirar(quantia)
+}
+
+function depositar(quantia) {
+  let quantia = quantia
+  conta.saldo += quantia
+}
+
+function retirar(quantia) {
+  let quantia = quantia
+  if (quantia > conta.saldo) {
+  alert('saldo insuficiente')   
+  } else {
+    conta.saldo -= quantia
+    }
+}

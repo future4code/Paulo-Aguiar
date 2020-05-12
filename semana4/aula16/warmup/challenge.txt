@@ -1,0 +1,5 @@
+1.
+O código devolve o index e o nome dos elementos de um array.
+
+2. 
+O código compara o valor dos elementos de um array e adiciona a outra array, caso haja igualdade.
