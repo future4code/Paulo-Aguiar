@@ -1,0 +1,21 @@
+.cardPequeno {
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  width: 40vw;
+}
+
+.cardPequeno img {
+  margin-right: 10px;
+  width: 30px
+}
+
+.cardPequeno p {
+  margin-right: 5px;
+}
+
+.cardPequeno p:first-of-type {
+  font-weight: bold;
+}
