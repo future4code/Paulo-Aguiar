@@ -1,0 +1,66 @@
+import React from "react";
+import "./styles.css";
+
+export default class App extends React.Component {
+  state = {
+    input1: "",
+    input2: "",
+    input3: ""
+  };
+
+  onChangeInput1 = event => {
+    const novoValor = event.target.value;
+    this.setState({ input1: novoValor });
+  };
+
+  onChangeInput2 = event => {
+    const novoValor = event.target.value;
+    this.setState({ input2: novoValor });
+  };
+
+  onChangeInput3 = event => {
+    const novoValor = event.target.value;
+    this.setState({ input3: novoValor });
+  };
+
+  onClickClearButton = () => {
+    // Imprimindo valores:
+    console.log(this.state.input1)
+    console.log(this.state.input2)
+    console.log(this.state.input3)
+
+    // Forma alternativa: console.log(this.state)
+
+    // Limpando valores:
+    this.setState({ input1: "", input2: "", input3: "" })
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>1: {this.state.input1}</h1>
+        <input
+          placeholder="Input 1"
+          value={this.state.input1}
+          onChange={this.onChangeInput1}
+        />
+        <hr />
+        <h2>2: {this.state.input2}</h2>
+        <input
+          placeholder="Input 2"
+          value={this.state.input2}
+          onChange={this.onChangeInput2}
+        />
+        <hr />
+        <h3>3: {this.state.input3}</h3>
+        <input
+          placeholder="Input 3"
+          value={this.state.input3}
+          onChange={this.onChangeInput3}
+        />
+        <hr />
+        <button onClick={this.onClickClearButton}>Limpar campos</button>
+      </div>
+    );
+  }
+}
