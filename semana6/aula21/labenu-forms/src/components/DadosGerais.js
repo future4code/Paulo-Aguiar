@@ -2,13 +2,6 @@ import React from 'react';
 import './etapas.css'
 
 class DadosGerais extends React.Component {
-  state = {
-    etapa2: false
-  };
-
-// irParaEtapa2 = () => {
-//   this.setState({etapa2: true})
-// }
 
   render() {
     return (
