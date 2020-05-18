@@ -15,23 +15,27 @@ class App extends React.Component {
 
   onClickEtapa2 = () => {
     this.setState = ({
-      etapa2: !this.state.etapa2, 
+      // etapa2: !this.state.etapa2, 
       dadosGerais: !this.state.dadosGerais
     })
   }
 
   render() {
-    return (
-      {this.state.dadosGerais ?
+    if(this.state.dadosGerais) {
+      return (
       <AppMain>
         <DadosGerais irParaEtapa2={this.onClickEtapa2}/>
       </AppMain>
-     : 
+      )
+    } else {
+      return (
       <AppMain>
         <Etapa2/>
       </AppMain>
+      )
     }
-    )
+      
+    
   }
 }
 
