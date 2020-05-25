@@ -20,50 +20,53 @@ const InputsContainer = styled.div`
 
 class App extends React.Component {
     state = {
-      tarefas: [
-        {
-          id: Date.now(),
-          texto: 'Exercício da tarde',
-          completa: false
-        },
-        {
-          id: Date.now(),
-          texto: 'Projeto',
-          completa: true
-        },
-      ],
+      tarefas: [],
       inputValue: '',
-      filter: 'pendentes'
+      filtro: ''
     }
 
   componentDidUpdate() {
-
+    localStorage.setItem("listaTarefas", JSON.stringify(this.state.tarefas));
   };
-
+  
   componentDidMount() {
-
+    if (localStorage.getItem("listaTarefas")) {
+      const listaTarefas = JSON.parse(localStorage.getItem("listaTarefas"));
+      this.setState({ tarefas: listaTarefas });
+    }
   };
 
   onChangeInput = (event) => {
-
-  }
+    this.setState({inputValue: event.target.value});
+  };
 
   criaTarefa = () => {
-
+    const novaTarefa = {
+      id: Date.now(),
+      texto: this.state.inputValue,
+      completa: false
+    }
+    const tarefasArray = [...this.state.tarefas, novaTarefa]
+    this.setState({tarefas: tarefasArray, inputValue: ''})
+    
   }
-
   selectTarefa = (id) => {
-
+    this.state.tarefas.map((tarefa) => {
+      if(tarefa.id === id) {
+        tarefa.completa = !tarefa.completa
+      }
+    })
+    this.setState({completa: this.state.completa})
   }
 
   onChangeFilter = (event) => {
-
+    this.setState({filtro: event.target.value })
   }
 
   render() {
     const listaFiltrada = this.state.tarefas
       .filter(tarefa => {
-        switch (this.state.filter) {
+        switch (this.state.filtro) {
           case 'pendentes':
             return !tarefa.completa
           case 'completas':
@@ -84,7 +87,7 @@ class App extends React.Component {
 
         <InputsContainer>
           <label>Filtro</label>
-          <select value={this.state.filter} onChange={this.onChangeFilter}>
+          <select value={this.state.filtro} onChange={this.onChangeFilter}>
             <option value="">Nenhum</option>
             <option value="pendentes">Pendentes</option>
             <option value="completas">Completas</option>
