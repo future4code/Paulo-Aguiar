@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "3f3e0c70-5ff8-4149-868e-c319a1b9560d",
+		"name": "exercício playlist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "paulo-machado-mello",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Redlist\"\n}\n\t",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists\n"
+					]
+				},
+				"description": "Criar uma nova playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "Add track to playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "paulo-machado-mello",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\t\"name\": \"The Kids Aren't Allright\",\n\t\t\"artist\": \"The Offspring\",\n\t\t\"url\": \"https://open.spotify.com/track/4EchqUKQ3qAQuRNKmeIpnf?si=IgGGD8TYRrmAlJp7KAnjGw\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "b0b3bdbe-3a64-42ad-b4f6-57245266a7f5"
+						}
+					]
+				},
+				"description": "Adiciona uma música à playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "Search playlist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "paulo-machado-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=list",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "list"
+						}
+					]
+				},
+				"description": "Pesquisar playlists"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Playlist Tracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "paulo-machado-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "6d294e6e-bd62-47ec-b248-8af102559a5d"
+						}
+					]
+				},
+				"description": "Lista as músicas de cada playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "Get all playlists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "paulo-machado-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists\n"
+					]
+				},
+				"description": "Listar todas as playlists"
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Track",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "paulo-machado-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks",
+						":trackId\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "d8b6e46c-33b0-42ee-b611-eedba35e194e"
+						},
+						{
+							"key": "trackId\n",
+							"value": "08b7326d-a2df-4b32-9075-f6d2d29bd936"
+						}
+					]
+				},
+				"description": "Deleta uma música da playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete playlist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "paulo-machado-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId\n",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId\n"
+					],
+					"variable": [
+						{
+							"key": "playlistId\n",
+							"value": "0612a29e-3fef-4cdd-a189-34cc8641be1f"
+						}
+					]
+				},
+				"description": "Apaga uma playlist"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
