@@ -1,15 +1,19 @@
 import React from 'react';
 import Styled from 'styled-components'
 import Axios from 'axios';
+import UserDetails from './components/UserDetails';
+import UserList from './components/UserList';
 
 const Main = Styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  button {
-    margin-top: 50px;
+  >button {
+    margin-top: 30px;
     height: 30px;
     width: 150px;
+    position: absolute;
+    left: 20px;
   }
 `
 const Section = Styled.div`
@@ -43,28 +47,14 @@ const Form = Styled.div`
 
 class App extends React.Component {
   state = {
-    usersList: [],
     userName: '',
-    userMail: ''
+    userMail: '',
+    userId: '',
+    pageList: false
   }
 
-  componentDidMount = () => {
-    this.listAllUsers()
-  }
-
-  listAllUsers = () => {
-    Axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users', {
-      headers: {
-        Authorization: 'paulo-machado-mello'
-      }
-    })
-      .then((response) => {
-        this.setState({usersList: response.data})
-      })
-      .catch((error) => {
-        window.alert('Não rola de te dar a lista, meeeh')
-      })
-      console.log(this.state.usersList)
+  changePage = () => {
+    this.setState({pageList: !this.state.pageList})
   }
 
   addUser = () => {
@@ -99,23 +89,28 @@ class App extends React.Component {
   render() {
     return (
       <Main>
-        <Section>
-          <Form>
-            <label>Nome:</label>
-            <input value={this.state.userName} onChange={this.onChangeUserName} type='text' />
-            <label>E-mail:</label>
-            <input value={this.state.userMail} onChange={this.onChangeUserMail} type='text' />
-            <button onClick={this.addUser}>Salvar</button>
-          </Form>
-        </Section>
-        <button onClick={this.listAllUsers}>Ir para lista</button>
-        <div>
-          {this.state.usersList.map((user) => {
-            return  <li key={user.id}>{user.name}</li>
-          })}
-        </div>
+        {this.state.pageList ?
+          <UserList /> :
+          <Section>
+            <Form>
+              <label>Nome:</label>
+              <input value={this.state.userName} onChange={this.onChangeUserName} type='text' />
+              <label>E-mail:</label>
+              <input 
+                value={this.state.userMail} 
+                onChange={this.onChangeUserMail} 
+                type='text' 
+              />
+              <button onClick={this.addUser}>Salvar</button>
+            </Form>
+          </Section>
+        }
+        <button onClick={this.changePage}> 
+          {this.state.pageList ? 'Voltar' : 'Ir para lista'} 
+        </button>
       </Main>
     );
   }
 }
+
 export default App;
