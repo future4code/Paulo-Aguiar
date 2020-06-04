@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2fe9bb2f.chunk.css",
+    "main.js": "/static/js/main.8bd61c0c.chunk.js",
+    "main.js.map": "/static/js/main.8bd61c0c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.40261604.js",
+    "runtime-main.js.map": "/static/js/runtime-main.40261604.js.map",
+    "static/js/2.6fd32a08.chunk.js": "/static/js/2.6fd32a08.chunk.js",
+    "static/js/2.6fd32a08.chunk.js.map": "/static/js/2.6fd32a08.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ca53277d2554f1071fffb32951faa751.js": "/precache-manifest.ca53277d2554f1071fffb32951faa751.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.2fe9bb2f.chunk.css.map": "/static/css/main.2fe9bb2f.chunk.css.map",
+    "static/js/2.6fd32a08.chunk.js.LICENSE.txt": "/static/js/2.6fd32a08.chunk.js.LICENSE.txt",
+    "static/media/comment_icon.svg": "/static/media/comment_icon.de299b47.svg",
+    "static/media/favorite-white.svg": "/static/media/favorite-white.042aa417.svg",
+    "static/media/favorite.svg": "/static/media/favorite.4c67d875.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.40261604.js",
+    "static/js/2.6fd32a08.chunk.js",
+    "static/css/main.2fe9bb2f.chunk.css",
+    "static/js/main.8bd61c0c.chunk.js"
+  ]
+}
