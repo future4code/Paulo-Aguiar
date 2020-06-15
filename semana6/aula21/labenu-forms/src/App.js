@@ -24,10 +24,10 @@ class App extends React.Component {
   render() {
     return (
       <AppMain>
-      {this.state.pagina === 1 && <DadosGerais irParaEtapa2={this.onClickPróximaEtapa}/>}
-      {this.state.pagina === 2 && <Etapa2 irParaEtapa3={this.onClickPróximaEtapa} />}
-      {this.state.pagina === 3 && <Etapa3 irParaEtapaFinal={this.onClickPróximaEtapa} />}
-      {this.state.pagina === 4 && <EtapaFinal irParaEtapaFinal={this.onClickPróximaEtapa} />}
+        {this.state.pagina === 1 && <DadosGerais irParaEtapa2={this.onClickPróximaEtapa}/>}
+        {this.state.pagina === 2 && <Etapa2 irParaEtapa3={this.onClickPróximaEtapa} />}
+        {this.state.pagina === 3 && <Etapa3 irParaEtapaFinal={this.onClickPróximaEtapa} />}
+        {this.state.pagina === 4 && <EtapaFinal irParaEtapaFinal={this.onClickPróximaEtapa} />}
       </AppMain>
         )
       }
