@@ -5,7 +5,7 @@ import Post from './components/Post/Post';
 class App extends React.Component {
   render() {
     return (
-      <div className={'app-container'}>
+      <div className={'app-container'}> 
         <Post
           nomeUsuario={'Louise'}
           fotoUsuario={'https://scontent.fbsb8-2.fna.fbcdn.net/v/t31.0-8/p720x720/16992091_639901482801424_7043168843874453531_o.jpg?_nc_cat=102&_nc_sid=85a577&_nc_eui2=AeHEBjTIJuQlEgN271XsN7GRtirr-o8NTk-2Kuv6jw1OT4AUZolnXv4BdWmF2L5Ju0Vc5US1czkV3zIgfXuQ5MMz&_nc_oc=AQmUNBSaht-Aa7a2BMxuU8T1uWUFIajxi_8o_2qnIy2RyzfhqubYKFlTLz7EsFbV51M&_nc_ht=scontent.fbsb8-2.fna&_nc_tp=6&oh=0a73c57ab028de804bdae0d5faf29e83&oe=5EE11683'}
@@ -13,8 +13,8 @@ class App extends React.Component {
         />
         <Post
           nomeUsuario={'Paulita'}
-          fotoUsuario={'https://scontent.fbsb8-1.fna.fbcdn.net/v/t1.0-9/p720x720/75561518_2654443751283280_5757016602130251776_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_eui2=AeEygqucAycJVEpvPhhamRoWA0swSxPV-F4DSzBLE9X4XmewUbO8IIL6QpMr-vXCanbPO_Y7rJSRF8lSuXNSn_sp&_nc_oc=AQm0gxbXHnlWHwXNIXoQ4dp1cKRPNI6-JLC7NgRkEZW0MP_vJp8O0NLeGBoOAdbDOp4&_nc_ht=scontent.fbsb8-1.fna&_nc_tp=6&oh=3155c9ef26931b87a9e94ac25f6761e3&oe=5EE2A4E0'}
-          fotoPost={'https://scontent.fbsb8-2.fna.fbcdn.net/v/t1.0-9/21740260_1568458873215112_790947895830042675_n.jpg?_nc_cat=107&_nc_sid=8024bb&_nc_eui2=AeHYzd7L34lcqMh2LgQyF97nLUM7HsLyb60tQzsewvJvrQf4DwZNSoWNmvWnvGjxwLxYROZpce-mGR_sxVulQcMP&_nc_oc=AQmQtahYH10GYJEDYH7EdSrmP_A5X-8AC1HC1lFtJKsBTMTz4iXG-bYHQSL9tWVIpaA&_nc_ht=scontent.fbsb8-2.fna&oh=e20041cf0b8033c3aeac061b19165aed&oe=5EE107D7'}
+          fotoUsuario={'https://scontent.fbsb8-1.fna.fbcdn.net/v/t1.0-9/p720x720/75561518_2654443751283280_5757016602130251776_o.jpg?_nc_cat=105&_nc_sid=85a577&_nc_oc=AQmKc7fkST4P1rOpJ5WQIV7R21iZntzAHJIkZCq8p18f3QYrnvT2nkaeTHq5VEu93WY&_nc_ht=scontent.fbsb8-1.fna&_nc_tp=6&oh=34d5008f3db5b70884942bdab9522436&oe=5F0E2660'}
+          fotoPost={'https://scontent.fbsb8-2.fna.fbcdn.net/v/t31.0-8/11958213_1067370020003764_892616411341616044_o.jpg?_nc_cat=111&_nc_sid=2d5d41&_nc_oc=AQkST3YzIVAbkD40i3H-0GUTJ_kO0nLAMmivnjw9lN5VhcCRSzId_zb_jQZmmWcvf-s&_nc_ht=scontent.fbsb8-2.fna&oh=16a2225533b794101be517a9ae4b2be6&oe=5F0C459C'}
         />
         <Post
           nomeUsuario={'Fascbolado'}
