@@ -21,7 +21,7 @@ const myTheme = createMuiTheme({
   }
 })
 
-export function ChooseScreen() {
+export default function ChooseScreen() {
   const [profile, setProfile] = useState('')
 
   useEffect(() => {
@@ -48,7 +48,7 @@ export function ChooseScreen() {
           <p>{profile.bio}</p>
           <Choice>
             <p>
-              <Fab size='large'>
+              <Fab>
                 <NotInterestedIcon fontSize='large' color='primary' />
               </Fab>
             </p>
