@@ -34,7 +34,7 @@ export default class AddPlaylist extends React.Component {
   createPlaylist = () => {
     const headers = {
       Authorization: 'paulo-machado-mello'
-    }
+    } 
     const body = {
       name: this.state.playlistName
     }

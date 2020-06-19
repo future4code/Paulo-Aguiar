@@ -4,10 +4,12 @@ import Fab from '@material-ui/core/Fab'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import NotInterestedIcon from '@material-ui/icons/NotInterested';
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core'
+import logo from '../../images/astromatch.png'
 import {
   Main,
   ProfileDetails,
-  Choice
+  Choice,
+  Logo
 } from './style'
 
 const myTheme = createMuiTheme({
@@ -23,10 +25,42 @@ const myTheme = createMuiTheme({
 
 export default function ChooseScreen() {
   const [profile, setProfile] = useState('')
-
+  const [profileId, setProfileId] = useState('')
+  const [profileChoice, setChoice] = useState(false)
+  
   useEffect(() => {
     getProfileToChoose()
   }, [])
+
+  function userChoiceTrue(id) {
+    setChoice(true)
+    setProfileId(id)
+    choosePerson()
+  }
+  
+  function userChoiceFalse(id) {
+    setChoice(false)
+    setProfileId(id)
+    choosePerson()
+  }
+
+  function choosePerson() {
+    const aluno = 'paulo-machado-mello'
+    const headers = {
+      ContentType: 'application/json'
+    }
+    const body = {
+      id: profileId,
+      choice: profileChoice
+    }
+    axios.post('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/' + aluno + '/choose-person', body, {headers})
+      .then((response) => {
+        getProfileToChoose()
+      })
+      .catch((error) => {
+        window.alert(error)
+      })
+  }
 
   function getProfileToChoose() {
     const aluno = 'paulo-machado-mello'
@@ -34,31 +68,36 @@ export default function ChooseScreen() {
       .then((response) => {
         setProfile(response.data.profile)
       })
+      .catch((error) => {
+        window.alert(error)
+      })
   }
 
   return(
     <MuiThemeProvider theme={myTheme}>
       <Main>
+        {profile ?
         <ProfileDetails>
           <img alt='person' src={profile.photo}/>
           <div>
-          <p>{profile.name}</p> 
-          <p>{profile.age}</p>
+            <p>{profile.name}</p> 
+            <p>{profile.age}</p>
           </div>
           <p>{profile.bio}</p>
-          <Choice>
-            <p>
-              <Fab>
-                <NotInterestedIcon fontSize='large' color='primary' />
-              </Fab>
-            </p>
-            <p>
-              <Fab>
-                <FavoriteIcon fontSize='large' color='secondary'/>
-              </Fab>
-            </p>
-          </Choice>
-        </ProfileDetails>
+        </ProfileDetails> :
+        <Logo alt='logo' src={logo} />}
+        <Choice>
+          <p>
+            <Fab onClick={() => userChoiceFalse(profile.id)}>
+              <NotInterestedIcon fontSize='large' color='primary' />
+            </Fab>
+          </p>
+          <p>
+            <Fab onClick={() => userChoiceTrue(profile.id)}>
+              <FavoriteIcon fontSize='large' color='secondary'/>
+            </Fab>
+          </p>
+        </Choice>
       </Main>
     </MuiThemeProvider>
   )

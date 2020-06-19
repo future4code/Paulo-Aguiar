@@ -5,7 +5,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import WhatshotIcon from '@material-ui/icons/Whatshot';
 import ChooseScreen from './components/ChooseScreen/ChooseScreen'
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core'
-import logo from './images/astromatch.png'
+import MatchScreen from './components/MatchScreen/MatchScreen'
 import {
   Main,
   Logo,
@@ -24,24 +24,32 @@ const myTheme = createMuiTheme({
 })
 
 function App() {
+  const [matchesDiv, setMatchesDiv] = useState(true);
+
+  function onClickMatches() {
+    setMatchesDiv(!matchesDiv)
+  }
+
   return (
     <MuiThemeProvider theme={myTheme}>
       <Main>
         <Logo>
-          <img alt='logo' src={logo}/>
           <span>astromatch</span>
         </Logo>
         <NavBar>
-          <Link color='primary' className={'link'}>
-            <HomeIcon className={'icon'} />
+          {matchesDiv ?
+          <Link onClick={onClickMatches} color='primary' className={'link'}>
+            <WhatshotIcon fontSize={'small'} className={'icon'} />
             Matches
-          </Link>
-          <Link color='primary' className={'link'}>
-            <WhatshotIcon className={'icon'} />
-            Matches
-          </Link>
+          </Link> :
+          <Link onClick={onClickMatches} color='primary' className={'link'}>
+            <HomeIcon fontSize={'small'} className={'icon'} />
+            Cardápio
+          </Link>}
         </NavBar>
-        <ChooseScreen />
+        {matchesDiv ?
+        <ChooseScreen /> :
+        <MatchScreen />}
       </Main>
     </MuiThemeProvider>
   );
