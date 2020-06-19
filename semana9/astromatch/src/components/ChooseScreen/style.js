@@ -13,7 +13,6 @@ export const Main = styled.main`
   grid-column: 2/3;
   color: black;
   img {
-    box-shadow: 0px 0px 8px 1px rgba(125,125,125,0.47);
     grid-column: 1/2;
     grid-row: 1/3;
     width: 380px;

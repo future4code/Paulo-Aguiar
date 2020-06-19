@@ -1,15 +1,19 @@
 import React, {useState, useEffect} from 'react'
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
-import HomeIcon from '@material-ui/icons/Home';
-import WhatshotIcon from '@material-ui/icons/Whatshot';
 import ChooseScreen from './components/ChooseScreen/ChooseScreen'
-import {createMuiTheme, MuiThemeProvider} from '@material-ui/core'
 import MatchScreen from './components/MatchScreen/MatchScreen'
+import axios from 'axios'
+import HomeIcon from '@material-ui/icons/Home'
+import WhatshotIcon from '@material-ui/icons/Whatshot'
+import {
+  createMuiTheme, 
+  MuiThemeProvider, 
+  Link
+} from '@material-ui/core'
 import {
   Main,
   Logo,
-  NavBar
+  NavBar,
+  ButtonClear
 } from './style'
 
 const myTheme = createMuiTheme({
@@ -24,7 +28,25 @@ const myTheme = createMuiTheme({
 })
 
 function App() {
+
   const [matchesDiv, setMatchesDiv] = useState(true);
+
+  function onClickClear() {
+    const aluno = 'paulo-machado-mello'
+    const headers = {
+      ContentType: 'application/jason'
+    }
+    const body = {
+      id: "PatusZf4mHH6UoZfYC8I"
+    }
+    axios.put('https://us-central1-missao-newton.cloudfunctions.net/astroMatch/' + aluno + '/clear', body, {headers})
+      .then((response) => {
+        window.alert('todos os seus matches foram desfeitos :(')
+      })
+      .catch((error) => {
+        window.alert(error)
+      })
+  }
 
   function onClickMatches() {
     setMatchesDiv(!matchesDiv)
@@ -50,6 +72,7 @@ function App() {
         {matchesDiv ?
         <ChooseScreen /> :
         <MatchScreen />}
+        <ButtonClear color={'primary'} onClick={onClickClear}>limpar matches</ButtonClear>
       </Main>
     </MuiThemeProvider>
   );

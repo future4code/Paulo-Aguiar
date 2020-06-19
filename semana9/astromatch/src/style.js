@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Breadcrumbs } from '@material-ui/core'
+import { Breadcrumbs, Button } from '@material-ui/core'
 
 export const Main = styled.main`
   /* display: flex;
@@ -32,4 +32,7 @@ export const Logo = styled.div`
     color: red;
     font-size: 40px;
   }
+`
+export const ButtonClear = styled(Button)`
+ 
 `
