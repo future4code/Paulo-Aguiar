@@ -9,7 +9,7 @@ function ListTripsPage() {
   }
   return (
     <main>
-      <h1>Lista de viagens disponíveis</h1>
+      <h1>Lista de viagens disponíveis para o usuário</h1>
       <button onClick={goToApplicationForm}>Candidatar-se</button>
     </main>
   )
