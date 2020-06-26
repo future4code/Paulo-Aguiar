@@ -5,7 +5,7 @@ import axios from 'axios'
 function LoginPage() {
   const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
-  const [tokenPass, setTokenPass] = useState(true)
+  const [tokenPass, setTokenPass] = useState(false)
 
   const history = useHistory()
 
@@ -44,7 +44,7 @@ function LoginPage() {
     axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/'+ aluno +'/login', body)
       .then((response) => {
         window.localStorage.setItem('token', response.data.token)
-        console.log(window.localStorage.getItem('token'))
+        window.alert(`admin ${user} logado com sucesso`)
         setTokenPass(true)
       })
       .catch((error) => {
