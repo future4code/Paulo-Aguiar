@@ -64,6 +64,7 @@ const App = () => {
       {postsList.map(post => {
         return (
           <Post
+            role='posts'
             key={post.id}
             post={post}
             toggleLike={toggleLike}

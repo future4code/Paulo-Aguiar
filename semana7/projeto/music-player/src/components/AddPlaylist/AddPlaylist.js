@@ -76,7 +76,7 @@ export default class AddPlaylist extends React.Component {
             type='text'
             placeholder='nova playlist'
             onChange={this.onChangePlaylistInput}
-            value={this.state.playlistName} 
+            value={this.state.playlistName}  
           />
           <div>
             <span onClick={this.onClickAddPlaylistForm}>cancelar</span>
