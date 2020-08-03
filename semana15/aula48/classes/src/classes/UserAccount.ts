@@ -8,9 +8,9 @@ export default class UserAccount {
   private transactions: Transaction[];
 
   constructor(
-     cpf: string,
-     name: string,
-     age: number,
+    name: string,
+    cpf: string,
+    age: number,
   ) {
      this.cpf = cpf;
      this.name = name;

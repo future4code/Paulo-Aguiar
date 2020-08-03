@@ -15,9 +15,8 @@ export default class Bank {
 
   public createAccount(UserAccount: UserAccount): void {
     let allAccounts = this.fileManager.getObjectFromFile()
-    this.accounts.push(UserAccount)
-    allAccounts.push(this.accounts)
-    this.fileManager.writeObjectToFile(allAccounts)
+    let allAccountsUpdate = [...allAccounts, UserAccount]
+    this.fileManager.writeObjectToFile(allAccountsUpdate)
   }
 
   public getAllAccounts(): UserAccount[] {
@@ -27,10 +26,11 @@ export default class Bank {
   public getAccountByCpfAndName(cpf: string, name: string): UserAccount | undefined {
     let accountCopy: UserAccount
     this.accounts.forEach((account: UserAccount) => {
-      if(account.getCpf() === cpf && account) {
+      if(account.getCpf() === cpf && account.getName() === name) {
         accountCopy = account
       }
     })
+    console.log(accountCopy)
     return accountCopy
   }
 }

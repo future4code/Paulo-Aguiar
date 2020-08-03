@@ -11,6 +11,7 @@ import JSONFileManager from "./classes/JSONFileManager"
 
 const func: string = process.argv[2]
 const fileManager: JSONFileManager = new JSONFileManager("./data.json")
+const newBank: Bank = new Bank([], fileManager)
 
 function getAllAccounts(): UserAccount[] {
   return fileManager.getObjectFromFile()
@@ -18,17 +19,20 @@ function getAllAccounts(): UserAccount[] {
 
 function createAccount(name: string, cpf: string, age: number): void {
   const newUserAccount: UserAccount = new UserAccount(name, cpf, age)
-  const newBank: Bank = new Bank([newUserAccount], fileManager)
   newBank.createAccount(newUserAccount)
 }
 
 function showBalance(cpf: string, name: string) {
-  const allAccounts = getAllAccounts()
-  allAccounts.forEach((account) => {
-    if(account.getCpf() === ) {
-
+  const allAccounts = fileManager.getObjectFromFile()
+  let balance: number
+  allAccounts.map((account: any) => {
+    if(account.cpf === cpf && account.name === name) {
+      balance = account.balance
+    } else {
+      console.log('informe nome e CPF do titular')
     }
   })
+  console.log(balance)
 }
 
 switch(func) {
@@ -36,7 +40,7 @@ switch(func) {
     createAccount(process.argv[3], process.argv[4], Number(process.argv[5]))
     break
   case 'ver-saldo':
-    showBalance()
+    showBalance(process.argv[3], process.argv[4])
 }
 
 // console.log(bancoItaú.getAllAccounts())
