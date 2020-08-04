@@ -1,0 +1,47 @@
+[
+  {
+    "userName": "Paulo Aguiar",
+    "userCpf": "963.342.402-00",
+    "userBirthday": "21/07/1987",
+    "balance": 5550,
+    "accExtract": [
+      {
+        "value": 86,
+        "date": "28/06/2020",
+        "description": "Compra na Kabum"
+      },
+      {
+        "value": 200,
+        "date": "2020-08-22T03:00:00.000Z",
+        "description": "conta da Claro"
+      }
+    ]
+  },
+  {
+    "userName": "Paulita",
+    "userCpf": "165.234.168-00",
+    "userBirthday": "1995-08-07T03:00:00.000Z",
+    "balance": 0,
+    "accExtract": []
+  },
+  {
+    "userName": "Whellyda Thayane",
+    "userCpf": "563.125.964-00",
+    "userBirthday": "1998-07-14T03:00:00.000Z",
+    "balance": 100,
+    "accExtract": [
+      {
+        "value": 500,
+        "date": "2020-08-03T01:52:02.453Z",
+        "description": "conta do Exatas"
+      }
+    ]
+  },
+  {
+    "userName": "Khaleda Bei",
+    "userCpf": "563.125.964-01",
+    "userBirthday": "2000-07-14T03:00:00.000Z",
+    "balance": 0,
+    "accExtract": []
+  }
+]

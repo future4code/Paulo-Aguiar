@@ -1,0 +1,16 @@
+[
+  {
+    "userName": "Paulo Aguiar",
+    "userCpf": "963.342.402-00",
+    "userBirthday": "21/07/1987",
+    "balance": 2750,
+    "extracts": [
+      {
+        "value": 86,
+        "date": "28/06/2020",
+        "description": "Compra na Kabum"
+      }
+    ]
+  }
+]
+
