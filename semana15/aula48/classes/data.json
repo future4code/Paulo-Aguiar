@@ -1,0 +1,20 @@
+[
+  {
+    "balance": 0,
+    "cpf": "927.107.503-00",
+    "name": "Paulo Aguiar",
+    "age": 33
+  },
+  {
+    "balance": 0,
+    "cpf": "927.107.103-00",
+    "name": "Paulita",
+    "age": 24
+  },
+  {
+    "balance": 200,
+    "cpf": "927.102.103-00",
+    "name": "Whellyda",
+    "age": 21
+  }
+]
