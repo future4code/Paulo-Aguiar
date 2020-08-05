@@ -14,5 +14,9 @@ export default class CommercialClient extends Commerce implements Client {
   ) {
     super(floorsQuantity, cep)
   }
+ 
+  public calculateBill() {
+    return this.consumedEnergy * 0.53
+  }
 
 }
