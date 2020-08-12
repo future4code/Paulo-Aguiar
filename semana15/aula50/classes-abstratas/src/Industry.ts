@@ -12,6 +12,7 @@ export class Industry extends Place {
 
   public getMachinesQuantity() {
     return this.machinesQuantity
+    
   }
 
 }
