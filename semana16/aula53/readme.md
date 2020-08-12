@@ -1,42 +1,8 @@
-import knex from "knex";
-import dotenv from "dotenv";
-import express, { Request, Response, response } from 'express'
-import {AddressInfo} from 'net'
+### Exercício 1
+a) Temos o resultado das linhas da tabela, além de vários metadados que também são retornados.
 
-dotenv.config();
-
-const connection = knex({
-  client: "mysql",
-  connection: {
-    host: process.env.DB_HOST,
-    port: Number(process.env.DB_PORT || "3306"),
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-  },
-});
-
-const app = express();
-
-app.use(express.json());
-
-const server = app.listen(process.env.PORT || 3003, () => {
-  if (server) {
-    const address = server.address() as AddressInfo;
-    console.log(`Server is running in http://localhost: ${address.port}`);
-  } else {
-    console.error(`Failure upon starting server.`);
-  }
-});
-
-const getActorById = async (id: string): Promise<any> => {
-  const result = await connection.raw(`
-    SELECT * FROM Actor WHERE id = "${id}"
-  `)
-  console.table(result [0][0])
-  return result [0][0]
-}
-
+b)
+```javascript
 async function getActorByName(name: string): Promise<any> {
   const result = await connection.raw(`
     SELECT * FROM Actor
@@ -45,7 +11,10 @@ async function getActorByName(name: string): Promise<any> {
   console.log(result[0][0])
   return result[0][0]
 }
+```
 
+c)
+```javascript
 async function getCountByGender(gender: string): Promise<any>{
   const result = await connection.raw(`
     SELECT COUNT(*) FROM Actor WHERE gender = "${gender}"
@@ -55,52 +24,38 @@ async function getCountByGender(gender: string): Promise<any>{
   console.log(result[0][0])
   return result[0][0]
 }
+```
 
-const createActor = async (
-  id: string,
-  name: string,
-  salary: number,
-  dateOfBirth: Date,
-  gender: string
-): Promise<void> => {
-  await connection
-    .insert({
-      id: id,
-      name: name,
-      salary: salary,
-      birth_date: dateOfBirth,
-      gender: gender,
-    })
-    .into("Actor");
-};
-
+### Exercício 2
+a)
+```javascript
 async function updateSalaryById(id: string, salary: number): Promise<void> {
   await connection.update({salary}).from("Actor").where("id", "=", id)
 }
+```
 
-
+b)
+```javascript
 async function deleteById(id: string): Promise<void> {
   await connection.from("Actor").where("id", "=", id).del()
 }
+```
 
+c) 
+```javascript
 async function getAvgSalaryByGender(gender: string): Promise<any> {
   const result = await connection.from("Actor").where("gender", "=", gender).avg("salary")
   console.log(result)
 }
+```
 
-app.get("/actor/:id", async (req: Request, res: Response) => {
-  try {
-    const id = req.params.id;
-    const actor = await getActorById(id);
+### Exercício 3
+a) O req.params permite a leitura do parâmetro passado pela URL, no caso, o id
 
-    res.status(200).send(actor)
-  } catch (err) {
-    res.status(400).send({
-      message: err.message,
-    });
-  }
-});
+b) As linhas são o status a resposta da requisição, caso dê certo, ou caso dê errado. Caso dê certo, vai ser retornado o status 200 e o ator em questão, caso dê errado, será retornado o status 400 e a mensagem d erro.
 
+c)
+```javascript
 app.get("/actor", async (req: Request, res: Response) => {
   try {
     const inputGender = req.query.gender as string
@@ -112,25 +67,11 @@ app.get("/actor", async (req: Request, res: Response) => {
     })
   }
 })
+```
 
-app.put("/actor", async (req: Request, res: Response) => {
-  try {
-    await createActor(
-      req.body.id,
-      req.body.name,
-      req.body.salary,
-      new Date(req.body.birth_date),
-      req.body.gender
-    );
-
-    res.status(200).send({Sucesso: "Ator cadastrado"});
-  } catch (err) {
-    res.status(400).send({
-      message: err.message,
-    });
-  }
-});
-
+### Exercício 4
+a)
+```javascript
 app.post('/actor', async (req: Request, res: Response) => {
   try {
     await updateSalaryById(
@@ -143,7 +84,10 @@ app.post('/actor', async (req: Request, res: Response) => {
     res.status(400).send({message: error.message})
   }
 })
+```
 
+b)
+```javascript
 app.delete('/actor/:id', async (request: Request, response: Response,) => {
   try {
     await deleteById(
@@ -155,7 +99,10 @@ app.delete('/actor/:id', async (request: Request, response: Response,) => {
     response.status(400).send({Erro: error.message})
   }
 })
+```
 
+### Exercício 5
+```javascript
 async function createNewMovie(
   id: string, 
   nome: string, 
@@ -181,7 +128,10 @@ app.post('/movie', async (req: Request, res: Response) => {
     res.status(400).send({erro: error.message})
   }
 })
+```
 
+### Exercício 6
+```javascript
 async function getAllMovies(): Promise<any> {
   const moviesList = await connection.raw(`
     SELECT * FROM Filmes LIMIT 15
@@ -198,7 +148,10 @@ app.get('/movie/all', async (req: Request, res: Response) => {
     res.status(400).send({erro: error.message})
   }
 })
+```
 
+### Exercício 7
+```javascript
 async function searchMovie(word: string): Promise<any> {
   const movie = await connection.raw(`
     SELECT * FROM Filmes
@@ -217,3 +170,4 @@ app.get('/movie', async (req: Request, resp: Response) => {
     resp.status(400).send({erro: error.message})
   }
 })
+```
