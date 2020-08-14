@@ -94,8 +94,10 @@ async function updateUser(
   name?: string, 
   nickname?: string, 
   email?: string): Promise<void> {
-
-  // await connection("User").update({attribute: `${name}`}).where({id: `${id}`})
+  
+  name && await connection("User").update({name: `${name}`}).where({id: `${id}`})
+  nickname && await connection("User").update({nickname: `${nickname}`}).where({id: `${id}`})
+  email && await connection("User").update({email: `${email}`}).where({id: `${id}`})
 }
 
 app.post('/user/edit/:id', async (req: Request, res: Response) => {
@@ -104,21 +106,15 @@ app.post('/user/edit/:id', async (req: Request, res: Response) => {
   const nickname = req.body.nickname
   const email = req.body.email
 
-  if(name === "") {
-    res.status(400).send("preencha o campo que deseja modificar")
-  }
-  try {
-    if(name) {
-      await updateUser(id, name)
+  if(name === "" || nickname === "" || email === "") {
+    res.status(400).send("Os campos não podem ficar vazios")
+  } else {
+    try {
+      await updateUser(id, name, nickname, email)
+      res.status(200).send("usuário modificado com sucesso")
+    } catch (error) {
+      res.status(400).send({error: error.message})
     }
-    if(nickname) {
-      await updateUser(id, nickname)
-    }
-    if(email) {
-      await updateUser(id, email)
-    }
-    res.status(200).send("usuário modificado com sucesso")
-  } catch (error) {
-    res.status(400).send({error: error.message})
   }
 })
+
