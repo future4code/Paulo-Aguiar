@@ -6,7 +6,7 @@ type event = {
   name: string,
   description: string,
   initDate: moment.Moment,
-  endDate: moment.Moment,
+  endDate: moment.Moment, 
 }
 
 let allEvents: event[] = [
