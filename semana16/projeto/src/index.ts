@@ -3,7 +3,6 @@ import knex from "knex";
 import dotenv from "dotenv";
 import express, { Request, Response } from 'express'
 import {AddressInfo} from 'net'
-import { readSync } from "fs";
 
 dotenv.config();
 
@@ -192,4 +191,3 @@ app.get('/task/:id', async (req: Request, res: Response) => {
     }
   }
 })
-
