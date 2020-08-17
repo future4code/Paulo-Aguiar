@@ -65,5 +65,20 @@ export default class UserAuth {
 }
 ```
 
-### Exercício 4
+### Exercício 5
+```javascript
+public async getUserInfoByEmail(email: string) {
+  const info =  await connection.raw(`
+      SELECT * FROM User2
+      WHERE email = "${email}"
+  `)
+  return info[0][0]
+  }
+```
+
+### Exercício 7
+a) Devemos utilizar as any pois a verificação pode retornar vários resultados diferentes.
+
+b)
+
 

@@ -1,22 +1,26 @@
 import {connection} from "../index"
-import {Request, Response} from "express"
-import generateId from "../services/generateId"
-
-const createId: generateId = new generateId()
 
 export default class UserDB {
-  public async createNewUser(req: Request, res: Response): Promise<void> {
-    try {
-      const {email, password} = req.body
-      await connection.insert({
-        id: createId.createNewId(),
-        email,
-        password
-      }).into('User2')
+  public async createNewUser(id: string, email: string, password: string): Promise<void> {
+    await connection.insert({
+      id,
+      email,
+      password
+    }).into('User2')
+  }
 
-      res.status(200).send({message: "usuário criado com sucesso"})
-    } catch (error) {
-      res.status(400).send({message: error.sqlMessage || error.message})
-    }
+  public async getUserById (id: string): Promise<any> {
+  const user = await connection.raw(`
+    SELECT * FROM User2
+    WHERE id = "${id}"
+  `)
+  return user[0][0]
+  }
+  public async getUserByEmail(email: string): Promise<any> {
+  const info =  await connection.raw(`
+      SELECT * FROM User2
+      WHERE email = "${email}"
+  `)
+  return info[0][0]
   }
 }
