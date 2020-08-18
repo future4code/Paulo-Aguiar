@@ -79,6 +79,3 @@ public async getUserInfoByEmail(email: string) {
 ### Exercício 7
 a) Devemos utilizar as any pois a verificação pode retornar vários resultados diferentes.
 
-b)
-
-

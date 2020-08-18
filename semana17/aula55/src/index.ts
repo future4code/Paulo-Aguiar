@@ -5,7 +5,7 @@ import { AddressInfo } from "net";
 import {v4} from "uuid"
 import generateId from "./services/generateId"
 import UserDB from "./data/UserDB"
-import UserAuth from "./data/UserAuth";
+import UserAuth from "./data/Authentication";
 import e from "express";
 
 dotenv.config();
