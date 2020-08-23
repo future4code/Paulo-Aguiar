@@ -4,7 +4,7 @@ import express, {Request, Response} from "express";
 import { AddressInfo } from "net";
 import generateId from "./services/generateId"
 import UserDB from "./data/UserDB"
-import Authenticator from "./data/Authenticator";
+import Authenticator, {USER_ROLE} from "./data/Authenticator";
 import HashManager from "./services/HashManager";
 import BaseDB from "./data/BaseDB";
 
@@ -93,7 +93,7 @@ app.delete('/user/:id', async (req: Request, res: Response) => {
     const token = req.headers.authorization as string
     const userData = new Authenticator().getData(token)
     const user = await userDB.getUserById(userData.id)
-    if(user.role !== "ADMIN") {
+    if(userData.role !== USER_ROLE.ADMIN) {
       throw Error("Usuário não autorizado para este tipo de ação")
     }
 
