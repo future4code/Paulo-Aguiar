@@ -1,0 +1,30 @@
+{
+  "dev:server": "ts-node-dev --ignore node_modules src/index.ts",
+  "name": "projeto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@types/express": "^4.17.7",
+    "@types/knex": "^0.16.1",
+    "@types/node": "^14.0.27",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.4",
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1",
+    "nodedev": "0.0.1",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "ts-node-dev": "^1.0.0-pre.57",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "ts-node-dev --ignore node_modules src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
